@@ -21,6 +21,12 @@ module.exports = {
       height: {
         'screen-80': '80vh',
       },
+      textColor: {
+        black: '#1E2431',
+        'light-black': '#5F6674',
+        danger: '#CC104B',
+        'light-gray': '#888E99',
+      },
     },
   },
   variants: {

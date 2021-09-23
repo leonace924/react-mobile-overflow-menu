@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
-import { Button } from 'components/Common/Common';
 import { Icon } from 'components/Icon/Icon';
+import { Button } from 'components/Common/Common';
+import SheetContent from 'components/SheetContent/SheetContent';
 import ActionSheet, { ActionSheetRef } from 'actionsheet-react';
 
 const Home: React.FC = () => {
@@ -25,6 +26,7 @@ const Home: React.FC = () => {
           Open
         </Button>
       </div>
+
       <ActionSheet
         ref={ref}
         bgStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.1)' }}
@@ -43,6 +45,8 @@ const Home: React.FC = () => {
               <Icon type="close" />
             </div>
           </div>
+
+          <SheetContent />
         </div>
       </ActionSheet>
     </div>

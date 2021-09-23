@@ -23,7 +23,7 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const classNames = cx(
-    'btn flex items-center px-10 py-3 rounded-2xl font-bold text-base uppercase filter filter contrast-200 drop-shadow-3xl',
+    'btn flex items-center justify-center px-10 py-3 rounded-2xl font-bold text-base uppercase',
     className,
     {
       'bg-primary text-white': color === 'primary',

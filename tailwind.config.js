@@ -10,6 +10,16 @@ module.exports = {
     extend: {
       backgroundColor: {
         primary: '#CC104B',
+        gray: 'rgba(30, 36, 49, 0.3)',
+      },
+      backgroundImage: {
+        hero: "url('/src/assets/images/img-bg-home.jpg')",
+      },
+      boxShadow: {
+        sheet: '0 -8px 20px rgba(0, 0, 0, 0.1)',
+      },
+      height: {
+        'screen-80': '80vh',
       },
     },
   },

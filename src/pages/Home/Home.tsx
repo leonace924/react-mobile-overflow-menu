@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
+import { Button } from 'components/Common/Common';
+import { Icon } from 'components/Icon/Icon';
 import ActionSheet, { ActionSheetRef } from 'actionsheet-react';
 
 const Home: React.FC = () => {
   const ref = useRef<ActionSheetRef>();
-  // const [sheetShow, setSheetShow] = useState(false);
 
   const handleOpen = () => {
     if (ref) {
@@ -18,15 +19,30 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div>
-      <button onClick={handleOpen}>Open</button>
-      <button onClick={handleClose}>Close</button>
-      <ActionSheet ref={ref}>
-        <div>
-          <h1>test</h1>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">
-            Button
-          </button>
+    <div className="flex items-center min-h-screen bg-hero">
+      <div className="items-center flex-1 p-4">
+        <Button icon="plus" onClick={handleOpen} className="w-full">
+          Open
+        </Button>
+      </div>
+      <ActionSheet
+        ref={ref}
+        bgStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.1)' }}
+        sheetStyle={{
+          boxShadow: '0px -8px 20px rgba(0, 0, 0, 0.1)',
+          borderTopLeftRadius: '24px',
+          borderTopRightRadius: '24px',
+        }}
+      >
+        <div className="px-8 pt-6 h-screen-80">
+          <div className="flex justify-end mb-2">
+            <div
+              className="flex items-center justify-center w-8 h-8 rounded-full cursor-pointer bg-gray"
+              onClick={handleClose}
+            >
+              <Icon type="close" />
+            </div>
+          </div>
         </div>
       </ActionSheet>
     </div>

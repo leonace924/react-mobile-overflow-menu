@@ -3,7 +3,7 @@ import cx from 'classnames';
 import { Icon } from 'components/Icon/Icon';
 import './Button.css';
 
-export interface ButtonProps {
+export type ButtonProps = {
   color?: 'primary';
   icon?: string;
   className?: string;
@@ -11,7 +11,7 @@ export interface ButtonProps {
   type?: 'button' | 'submit';
   disabled?: boolean;
   children?: React.ReactNode;
-}
+};
 
 const Button = ({
   color = 'primary',

@@ -2,6 +2,9 @@
 
 You are tasked with implementing our bottom session menu on mobile (either web or app). This menu contains session information, as well as settings. The session information should be retrieved from a mock async API call or an online service like [jsonplaceholder](https://jsonplaceholder.typicode.com/) or [mockapi](https://mockapi.io/).
 
+- Add an option (button or checkbox) for users to select or deselect all checkboxes at once
+- Disable the OPEN button for 30 seconds after every 3 clicks and display the countdown timer inside the button
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

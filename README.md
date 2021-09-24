@@ -5,6 +5,16 @@ You are tasked with implementing our bottom session menu on mobile (either web o
 - Add an option (button or checkbox) for users to select or deselect all checkboxes at once
 - Disable the OPEN button for 30 seconds after every 3 clicks and display the countdown timer inside the button
 
+## Structure and details
+
+- `hooks/useTimer` : custom hook to count down
+- `redux/slices` : save slices data for redux state management
+- `services/comment` : createApi service to get jsonplaceholder comments data, from RTK query
+- `assets/images` : includes assets for project
+- `pages/Home` : includes files for pages
+- `styles` : includes tailwind style and postcss index styles
+- `components` : includes components which we use for this project more than twice or can be split into
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -11,6 +11,7 @@ module.exports = {
       backgroundColor: {
         primary: '#CC104B',
         gray: 'rgba(30, 36, 49, 0.3)',
+        'light-yellow': '#FFEED8',
       },
       backgroundImage: {
         hero: "url('/src/assets/images/img-bg-home.jpg')",

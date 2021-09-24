@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 
-export const useTimer = (startTimer: boolean) => {
-  // set initial state to be 30s
-  const [count, setCount] = useState(30);
+export const useTimer = (startTimer: boolean, time: number) => {
+  const [count, setCount] = useState(time);
 
   useEffect(() => {
     if (startTimer) {
@@ -10,6 +9,8 @@ export const useTimer = (startTimer: boolean) => {
         setCount((c) => c - 1);
       }, 1000);
       return () => clearInterval(timeLeft);
+    } else {
+      setCount(time);
     }
   }, [startTimer]);
 

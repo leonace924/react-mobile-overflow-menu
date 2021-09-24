@@ -16,6 +16,9 @@ module.exports = {
       backgroundImage: {
         hero: "url('/src/assets/images/img-bg-home.jpg')",
       },
+      borderColor: {
+        danger: '#CC104B',
+      },
       boxShadow: {
         sheet: '0 -8px 20px rgba(0, 0, 0, 0.1)',
       },

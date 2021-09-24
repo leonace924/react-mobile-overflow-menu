@@ -13,7 +13,7 @@ export type ButtonProps = {
   children?: React.ReactNode;
 };
 
-const Button = ({
+const Button: React.FC<ButtonProps> = ({
   color = 'primary',
   icon = undefined,
   type = 'button',
@@ -21,7 +21,7 @@ const Button = ({
   disabled = false,
   children,
   ...props
-}: ButtonProps) => {
+}) => {
   const classNames = cx(
     'btn flex items-center justify-center px-10 py-3 rounded-2xl font-bold text-base uppercase',
     className,

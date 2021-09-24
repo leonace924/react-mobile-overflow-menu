@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Icon } from 'components/Icon/Icon';
 import Title from 'components/Title/Title';
 import Loading from 'components/Loading/Loading';
 import SocialIcons from 'components/SocialIcons/SocialIcons';
@@ -29,9 +28,11 @@ const SheetContent: React.FC<SheetContentProps> = ({ className = '' }) => {
             Hosted by <strong className="text-danger">Rebecca Countryman</strong>
           </h3>
 
+          {/* Part 2 #1 task START */}
           <div className="mt-6">
             <CheckboxList />
           </div>
+          {/* Part 2 #1 task END */}
 
           <div className="mt-6">
             <h5 className="mb-1 text-base font-bold text-black">What&apos;s it about?</h5>

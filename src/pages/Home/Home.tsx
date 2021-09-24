@@ -20,7 +20,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center min-h-screen bg-hero">
+    <div className="flex items-center min-h-screen bg-hero bg-no-repeat	bg-cover">
       <div className="items-center flex-1 p-4">
         <Button icon="plus" onClick={handleOpen} className="w-full">
           Open
@@ -36,17 +36,19 @@ const Home: React.FC = () => {
           borderTopRightRadius: '24px',
         }}
       >
-        <div className="px-8 pt-6 h-screen-80">
-          <div className="flex justify-end mb-2">
-            <div
-              className="flex items-center justify-center w-8 h-8 rounded-full cursor-pointer bg-gray"
-              onClick={handleClose}
-            >
-              <Icon type="close" />
+        <div className="h-screen-80">
+          <div className="relative h-full px-8 pt-16 overflow-y-auto">
+            <div className="fixed top-6 right-8">
+              <div
+                className="flex items-center justify-center w-8 h-8 rounded-full cursor-pointer bg-gray"
+                onClick={handleClose}
+              >
+                <Icon type="close" />
+              </div>
             </div>
-          </div>
 
-          <SheetContent />
+            <SheetContent />
+          </div>
         </div>
       </ActionSheet>
     </div>

@@ -30,7 +30,6 @@ const CheckboxList: React.FC = () => {
     setOptions(results);
   };
 
-  console.log(options);
   return (
     <div>
       <div className="mb-2">

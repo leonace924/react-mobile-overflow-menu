@@ -11,7 +11,7 @@ export type SheetContentProps = {
 
 const SheetContent: React.FC<SheetContentProps> = ({ className = '' }) => {
   const { data, error, isLoading } = useGetCommentByIdQuery(2);
-  console.log(data);
+
   if (error) return <p>There is error while fetching data</p>;
   if (isLoading) return <Loading />;
 
@@ -29,17 +29,21 @@ const SheetContent: React.FC<SheetContentProps> = ({ className = '' }) => {
           </h3>
 
           {/* Part 2 #1 task START */}
-          <div className="mt-6">
+          <div className="mx-4 mt-10">
             <CheckboxList />
           </div>
           {/* Part 2 #1 task END */}
 
-          <div className="mt-6">
+          <div className="mt-10">
             <h5 className="mb-1 text-base font-bold text-black">What&apos;s it about?</h5>
             <p className="text-base text-black">{data.body}</p>
           </div>
 
-          <div className="mt-6"></div>
+          <div className="mt-6">
+            <h5 className="mb-1 text-base font-bold text-black">Rebecca Countryman</h5>
+            <p className="text-base text-black">{data.body}</p>
+          </div>
+
           <div className="pt-5 pb-10">
             <SocialIcons />
           </div>

@@ -13,6 +13,7 @@ module.exports = {
         primary: '#CC104B',
         gray: 'rgba(30, 36, 49, 0.3)',
         'light-yellow': '#FFEED8',
+        disabled: '#5F6674',
         success: '#67B678',
       },
       backgroundImage: {

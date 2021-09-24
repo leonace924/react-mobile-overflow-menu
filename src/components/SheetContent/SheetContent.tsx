@@ -1,7 +1,8 @@
 import React from 'react';
 // import { Icon } from 'components/Icon/Icon';
-import Loading from 'components/Loading/Loading';
 import Title from 'components/Title/Title';
+import Loading from 'components/Loading/Loading';
+import SocialIcons from 'components/SocialIcons/SocialIcons';
 import { useGetCommentByIdQuery } from 'services/comment';
 
 export type SheetContentProps = {
@@ -32,6 +33,10 @@ const SheetContent = ({ className = '' }: SheetContentProps) => {
           <div className="mt-6">
             <h5 className="mb-1 text-base font-bold text-black">What&apos;s it about?</h5>
             <p className="text-base text-black">{data.body}</p>
+          </div>
+
+          <div className="pt-5 pb-10">
+            <SocialIcons />
           </div>
         </>
       )}

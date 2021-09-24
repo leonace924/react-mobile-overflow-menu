@@ -12,8 +12,10 @@ You are tasked with implementing our bottom session menu on mobile (either web o
 - `services/comment` : createApi service to get jsonplaceholder comments data, from RTK query
 - `assets/images` : includes assets for project
 - `pages/Home` : includes files for pages
-- `styles` : includes tailwind style and postcss index styles
-- `components` : includes components which we use for this project more than twice or can be split into
+- `components/` : includes components which we use for this project more than twice or can be split into
+- `styles/` : includes tailwind style and postcss index styles
+
+## This project is connected to Vercel so you can check the site on this preview link [https://react-mobile-overflow-menu.vercel.app/]
 
 # Getting Started with Create React App
 

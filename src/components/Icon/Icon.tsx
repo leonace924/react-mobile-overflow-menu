@@ -1,13 +1,13 @@
 import * as React from 'react';
 export type IconType = string | 'plus';
 
-type IconProps = {
+export type IconProps = {
   type: IconType;
   className?: string;
   alt?: string;
 };
 
-export const Icon = ({ type, alt, ...rest }: IconProps) => {
+export const Icon: React.FC<IconProps> = ({ type, alt, ...rest }) => {
   switch (type) {
     case 'plus':
       return (

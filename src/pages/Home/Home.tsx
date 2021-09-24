@@ -1,13 +1,33 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Icon } from 'components/Icon/Icon';
 import { Button } from 'components/Common/Common';
 import SheetContent from 'components/SheetContent/SheetContent';
+import { useAppSelector, useAppDispatch } from 'redux/hooks';
+import { increment, setCount } from 'redux/slices/count/countSlice';
+import { useTimer } from 'hooks/useTimer';
 import ActionSheet, { ActionSheetRef } from 'actionsheet-react';
 
 const Home: React.FC = () => {
   const ref = useRef<ActionSheetRef>();
+  const [disableButton, setDisableButton] = useState(false);
+  const dispatch = useAppDispatch();
+  const clickCount = useAppSelector((state) => state.counter.value);
+  let timerSec = useTimer(disableButton, 30);
+
+  useEffect(() => {
+    if (timerSec < 1) {
+      setDisableButton(false);
+    }
+  }, [timerSec]);
 
   const handleOpen = () => {
+    if (clickCount >= 2) {
+      dispatch(setCount(0));
+      setDisableButton(true);
+    } else {
+      dispatch(increment());
+    }
+
     if (ref) {
       ref?.current?.open();
     }
@@ -20,10 +40,15 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center min-h-screen bg-hero bg-no-repeat	bg-cover">
+    <div className="flex items-center min-h-screen bg-no-repeat bg-cover bg-hero">
       <div className="items-center flex-1 p-4">
-        <Button icon="plus" onClick={handleOpen} className="w-full">
-          Open
+        <Button
+          icon={disableButton ? undefined : 'plus'}
+          onClick={handleOpen}
+          className="w-full"
+          disabled={disableButton}
+        >
+          {disableButton ? `${timerSec} s` : 'Open'}
         </Button>
       </div>
 

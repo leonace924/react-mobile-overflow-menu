@@ -23,11 +23,12 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const classNames = cx(
-    'btn flex items-center justify-center px-10 py-3 rounded-2xl font-bold text-white text-base uppercase',
+    'btn flex items-center justify-center px-10 py-3 rounded-2xl font-bold text-white text-base',
     className,
     {
       'cursor-not-allowed bg-disabled': disabled,
       'bg-primary': color === 'primary' && !disabled,
+      uppercase: !disabled,
     },
   );
 

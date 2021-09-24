@@ -35,7 +35,7 @@ const CheckboxList: React.FC = () => {
       <div className="mb-2">
         <Checkbox label={'Check / Uncheck All'} isChecked={checkedAll} onCheck={handleAllChecked} />
       </div>
-      <hr className="mb-2" />
+      <hr className="my-3 border-gray-200" />
       {options.map((item, id) => (
         <div className="mb-2 last:mb-0" key={id}>
           <Checkbox
@@ -44,6 +44,7 @@ const CheckboxList: React.FC = () => {
             isChecked={item.isChecked}
             onCheck={handleCheckField}
           />
+          <hr className="my-3 border-gray-200" />
         </div>
       ))}
     </div>

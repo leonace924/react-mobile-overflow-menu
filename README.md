@@ -15,7 +15,6 @@ You are tasked with implementing our bottom session menu on mobile (either web o
 - `components/` : includes components which we use for this project more than twice or can be split into
 - `styles/` : includes tailwind style and postcss index styles
 
-## This project is connected to Vercel so you can check the site on this preview link [https://react-mobile-overflow-menu.vercel.app/]
 
 # Getting Started with Create React App
 
